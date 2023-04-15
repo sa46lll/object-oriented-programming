@@ -4,7 +4,7 @@ import com.sa46lll.step1.vo.User;
 import com.sa46lll.step7.dao.UserDao;
 
 /*
- * 객체 생성하는 열할을 DaoFactory에 위임함
+ * 객체 생성하는 열할을 DaoFactory에 위임함 (Factory Method 패턴)
  */
 public class UserDaoTest {
 	public static void main(String[] args) throws Exception {

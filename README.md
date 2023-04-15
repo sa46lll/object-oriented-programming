@@ -24,8 +24,8 @@
 #### step 6 : 의존성 주입 (Dependency Injection)
   - 생성자 주입을 통해 class 간의 연관관계를 없애고, runtime object 관계를 설정한다. ConnectionGenerator 인터페이스의 구현체가 변경되어도, UserDao 코드는 변경되지 않을 것이다. 기존 코드를 수정하지 않고도 새로운 요구사항에 대응할 수 있어 개방 폐쇄 원칙(OCP)을 준수할 것이다.
 
-#### step 7 : 템플릿 메서드 패턴 (Template Method Pattern)
-  - 객체 생성을 DaoFactory에 위임하여 main(UserDaoTest)과의 역할을 분리한다. 새로운 구현 클래스가 추가되어도 기존 Factory 코드의 수정없이 새로운 Factory를 추가할 수 있다. 객체를 생성할 때 어떤 클래스의 인스턴스를 만들지 DaoFactory가 결정한다. 이것은 인스턴스 생성을 서브 클래스에게 위임한 것으로 Template Method Pattern 생성 패턴을 사용하였다.
+#### step 7 : 팩토리 메서드 패턴 (Factory Method Pattern)
+  - 객체 생성을 DaoFactory에 위임하여 main(UserDaoTest)과의 역할을 분리한다. 새로운 구현 클래스가 추가되어도 기존 Factory 코드의 수정없이 새로운 Factory를 추가할 수 있다. 객체를 생성할 때 어떤 클래스의 인스턴스를 만들지 DaoFactory가 결정한다. 이것은 인스턴스 생성을 서브 클래스에게 위임한 것으로 Factory Method Pattern 생성 패턴을 사용하였다.
 
 #### step 8 : 싱글톤 (Singleton)
   - DaoFactory 클래스에 싱글톤을 적용하여 객체를 반복해서 생성하는 것을 방지한다. 객체의 라이프 사이클을 관리한다는 점에서 DaoFactory는 스프링의 ApplicationContext와 비슷한 역할을 담당하며, ApplicationContext는 더 많은 기능과 유연성을 제공한다는 점에서 차이가 있다.
