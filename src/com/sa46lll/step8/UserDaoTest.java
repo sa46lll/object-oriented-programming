@@ -14,7 +14,7 @@ public class UserDaoTest {
 		
 		User user = new User("sa46lll8", "1234", "kirby");
 		
-		UserDao dao = daoFactory.userDao();
+		UserDao dao = daoFactory.getUserDao();
 		
 		dao.insert(user);
 		User result = dao.select("sa46lll8");
